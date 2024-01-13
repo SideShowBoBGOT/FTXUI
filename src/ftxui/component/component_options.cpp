@@ -246,7 +246,7 @@ ButtonOption ButtonOption::Animated(Color background,
                                     Color foreground_active) {
   ButtonOption option;
   option.transform = [](const EntryState& s) {
-    auto element = text(s.label) | borderEmpty;
+    auto element = text(s.label);
     if (s.focused) {
       element |= bold;
     }
